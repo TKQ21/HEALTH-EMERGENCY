@@ -3,7 +3,11 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "@/components/Navbar";
+import MedicalDisclaimer from "@/components/MedicalDisclaimer";
 import Index from "./pages/Index";
+import TriagePage from "./pages/TriagePage";
+import AccidentRiskPage from "./pages/AccidentRiskPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -14,9 +18,12 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <MedicalDisclaimer />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/triage" element={<TriagePage />} />
+          <Route path="/accident-risk" element={<AccidentRiskPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
