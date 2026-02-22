@@ -1,73 +1,207 @@
-# Welcome to your Lovable project
+🚑 Emergency Risk & Triage AI Platform
 
-## Project info
+ project link: https://ai-health-emergency.lovable.app
+ 
+🧠 1️⃣ Project Overview
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Emergency Risk & Triage AI ek real-time urgency classification system hai jo users ke symptoms analyze karke unhe batata hai:
 
-## How can I edit this code?
+🟢 Routine care sufficient hai
 
-There are several ways of editing your application.
+🟡 Doctor consultation required hai
 
-**Use Lovable**
+🔴 Immediate emergency action lena chahiye
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+System diagnosis nahi karta.
+Ye urgency classification karta hai — jo real-world hospitals me triage process ka core concept hota hai.
 
-Changes made via Lovable will be committed automatically to this repo.
+🎯 2️⃣ Problem Statement
 
-**Use your preferred IDE**
+Bahut log confuse hote hain:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Kya mujhe hospital jana chahiye?
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Kya ye serious hai?
 
-Follow these steps:
+Kya wait kar sakta hoon?
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Hospitals overcrowded hote hain.
+Emergency rooms overload ho jate hain.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Isliye system ka goal hai:
 
-# Step 3: Install the necessary dependencies.
-npm i
+Pre-screening aur urgency prioritization.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🚨 3️⃣ Module 1: Symptom Triage Engine
+🔹 Input
 
-**Edit a file directly in GitHub**
+Text input (English + Hinglish)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Example:
 
-**Use GitHub Codespaces**
+“Mere chest me dard hai”
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+“Breathing problem ho rahi hai”
 
-## What technologies are used for this project?
+“High fever 102”
 
-This project is built with:
+🔹 Processing Logic
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+System rule-based decision tree use karta hai.
 
-## How can I deploy this project?
+🔴 RED Conditions:
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Chest pain + breathing distress
 
-## Can I connect a custom domain to my Lovable project?
+Unconsciousness
 
-Yes, you can!
+Stroke-like symptoms
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Heavy bleeding
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+🟡 YELLOW Conditions:
+
+High fever (>101°F)
+
+Persistent vomiting
+
+Moderate abdominal pain
+
+🟢 GREEN Conditions:
+
+Mild cold
+
+Sneezing
+
+Light headache
+
+System output deta hai:
+
+Risk Level
+
+Confidence Score
+
+Triggered Rules
+
+Recommended Action
+
+Example:
+
+RED → “Seek emergency medical care immediately.”
+
+🚗 4️⃣ Module 2: Accident Risk Prediction
+
+Ye medical nahi — safety risk module hai.
+
+Inputs:
+
+Time of day
+
+Weather condition
+
+Traffic density
+
+Weekend factor
+
+Risk Calculation Model:
+
+Base Risk = 20
+Night hours +15
+Rain +20
+Heavy traffic +25
+Weekend +10
+
+Dynamic risk percentage generate hota hai.
+
+Example:
+Rain + Night + Heavy Traffic = 75% Risk
+
+🎨 5️⃣ UI Design Philosophy
+
+Dark mode emergency theme
+
+Neon red alert system
+
+Large emergency buttons
+
+Full screen RED flashing mode
+
+Heatmap-style risk visualization
+
+Design focus:
+High visibility + urgency awareness.
+
+📊 6️⃣ Audit & Logging Concept
+
+System architecture me:
+
+Each triage session logged
+
+Risk level stored
+
+Timestamp maintained
+
+Rule triggers recorded
+
+Ye compliance aur traceability ke liye important hai.
+
+🏗 7️⃣ Architecture Design
+
+Frontend:
+
+Reactive UI
+
+Real-time updates
+
+Dynamic state transitions
+
+Backend (Design-Ready Structure):
+
+REST APIs
+
+Rule engine logic
+
+JSON structured responses
+
+Database persistence
+
+API Structure:
+
+POST /api/triage
+POST /api/accident-risk
+GET /api/audit
+GET /api/health
+
+🔐 8️⃣ Safety & Compliance
+
+No medical prescription
+
+No disease diagnosis
+
+Urgency classification only
+
+Designed for responsible AI usage
+
+💡 9️⃣ Real-World Use Cases
+
+Telemedicine pre-screening
+
+Rural health support
+
+Ambulance priority guidance
+
+ER overload reduction
+
+Smart city safety systems
+
+🚀 🔟 Future Enhancements
+
+ML-based symptom classifier
+
+NLP severity detection
+
+Real hospital API integration
+
+Live weather API integration
+
+Ambulance dispatch integration
